@@ -52,9 +52,7 @@ To gain deeper insights into customer preferences, I created a pivot table that 
 ![Screenshot 2024-11-04 140437](https://github.com/user-attachments/assets/e0eb6cb9-01dc-4cd0-a611-7f70d60535a0)
 
 
-Key Insight:
-
-The analysis shows that the Basic subscription type is the most popular, accounting for 50% of all customers. Both Premium and Standard subscription types equally share the remaining customer base at 25% each. This insight highlights customer preference for the more affordable tier, suggesting opportunities for upselling strategies or enhanced features in higher-tier plans to attract more customers.
+**Key Insight**: The analysis shows that the Basic subscription type is the most popular, accounting for 50% of all customers. Both Premium and Standard subscription types equally share the remaining customer base at 25% each. This insight highlights customer preference for the more affordable tier, suggesting opportunities for upselling strategies or enhanced features in higher-tier plans to attract more customers.
 
 2. Number of Customers per Region
 
@@ -65,19 +63,36 @@ To understand the geographic distribution of customers, a pivot table was create
 **Key Insight**: The customer distribution is evenly spread across all regions, with each region contributing exactly 25% of the total customer base. This uniformity suggests consistent market penetration and customer reach across different regions. Future strategies could explore targeted regional marketing campaigns or localized promotions to leverage this balanced distribution for increased customer engagement.
 
 
+3. Revenue by Subscription Type
+
+To assess the revenue generated from different subscription types, a pivot table was used to summarize the total revenue for each category. The analysis produced the following results:
 
 
+![Screenshot 2024-11-04 141218](https://github.com/user-attachments/assets/212db425-e507-44f8-b66f-abab2e1a2b7c)
+
+**Key Insight**: The Basic subscription type dominates revenue generation, contributing nearly 50% of the total revenue. The Premium and Standard subscriptions, while each accounting for 25%, collectively make up the other half of the revenue. This indicates that a significant portion of income is reliant on the Basic plan, emphasizing the importance of this tier to the business. Enhancing the value of Premium and Standard subscriptions could provide an opportunity for boosting overall revenue and diversifying the income stream.
+
+4. Trend of Subscription Types by Region
+
+In my analysis of subscription data, I explored how different subscription types were distributed across various regions. Below is a summary table that shows the number of customers for each subscription type by region:
 
 
+![Screenshot 2024-11-04 141505](https://github.com/user-attachments/assets/30136cdd-1f7d-4fef-bc3f-ede5f158633f)
 
 
+**Key Insight:** The Basic subscription type is predominantly chosen by customers in the East and North regions, making up 100% of the customer base in these areas. The Premium subscription type is most popular in the South, while the Standard subscription type is only present in the West. This segmentation suggests region-specific preferences, which could inform targeted marketing strategies and service customization to better address regional customer needs.
+
+Subscription Cancellations Overview
+
+To understand the balance between active subscriptions and cancellations, I analyzed the dataset to determine the number of customers who maintained their subscriptions versus those who canceled. The table below presents the findings:
 
 
+![Screenshot 2024-11-04 141742](https://github.com/user-attachments/assets/25094b8b-29fd-412d-840b-e2816aa6212b)
 
 
+Key Insight:
 
-
-
+Out of 75,000 customers, 55% have active subscriptions, while 45% have canceled. The significant cancellation rate highlights a need to explore factors like service quality, pricing, or competition to reduce churn and improve retention.
 
 
 
