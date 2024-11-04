@@ -44,14 +44,25 @@ I was able to dedraw the average duration was calucated to be 12 hours
 
 Key inisght: The average subscription duration being calculated as 12 months says that on average, customers are staying with the service for one year. This indicates customer retention trends and implies that the service successfully retains customers for about a year before potential churn.
 
-2. 
+2. Count of Customers per Subscription Type:
+
+To gain deeper insights into customer preferences, I created a pivot table that summarized the number of customers for each subscription type. The analysis revealed the distribution as follows:
 
 
+![Screenshot 2024-11-04 140437](https://github.com/user-attachments/assets/e0eb6cb9-01dc-4cd0-a611-7f70d60535a0)
 
 
+Key Insight:
 
+The analysis shows that the Basic subscription type is the most popular, accounting for 50% of all customers. Both Premium and Standard subscription types equally share the remaining customer base at 25% each. This insight highlights customer preference for the more affordable tier, suggesting opportunities for upselling strategies or enhanced features in higher-tier plans to attract more customers.
 
+2. Number of Customers per Region
 
+To understand the geographic distribution of customers, a pivot table was created to count the number of customers from each region. The analysis provided the following breakdown:
+
+![Screenshot 2024-11-04 140929](https://github.com/user-attachments/assets/1202c826-7eb4-47b9-b57b-384cdc5e063f)
+
+**Key Insight**: The customer distribution is evenly spread across all regions, with each region contributing exactly 25% of the total customer base. This uniformity suggests consistent market penetration and customer reach across different regions. Future strategies could explore targeted regional marketing campaigns or localized promotions to leverage this balanced distribution for increased customer engagement.
 
 
 
