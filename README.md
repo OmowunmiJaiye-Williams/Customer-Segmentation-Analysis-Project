@@ -82,7 +82,7 @@ In my analysis of subscription data, I explored how different subscription types
 
 **Key Insight:** The Basic subscription type is predominantly chosen by customers in the East and North regions, making up 100% of the customer base in these areas. The Premium subscription type is most popular in the South, while the Standard subscription type is only present in the West. This segmentation suggests region-specific preferences, which could inform targeted marketing strategies and service customization to better address regional customer needs.
 
-Subscription Cancellations Overview
+Subscription Cancellations
 
 To understand the balance between active subscriptions and cancellations, I analyzed the dataset to determine the number of customers who maintained their subscriptions versus those who canceled. The table below presents the findings:
 
@@ -93,6 +93,93 @@ To understand the balance between active subscriptions and cancellations, I anal
 Key Insight:
 
 Out of 75,000 customers, 55% have active subscriptions, while 45% have canceled. The significant cancellation rate highlights a need to explore factors like service quality, pricing, or competition to reduce churn and improve retention.
+
+
+### Microsoft SQL Server: Data Querying and Analysis
+In this section, I conducted a comprehensive SQL analysis of customer subscription data for a subscription service. The goal was to extract key insights regarding customer behavior, subscription types, cancellations, and regional distribution. This analysis helps inform strategic decisions aimed at improving customer retention and service offerings.
+
+1. Loading the Dataset: I first loaded my dataset from Excel into my SQL Server environment to write and validate my queries.
+
+2. Key Insights Queries
+
+I wrote several SQL queries to extract key insights from the dataset:
+
+---Total Number of Customers from Each Region:
+
+```
+SELECT Region, COUNT(CustomerID) AS TotalCustomers
+FROM [Customer Data LITA]
+GROUP BY Region;
+```
+
+---Most Popular Subscription Type by Number of Customers:
+
+```
+SELECT SubscriptionType, COUNT(CustomerID) AS TotalCustomers
+FROM [Customer Data LITA]
+GROUP BY SubscriptionType
+ORDER BY TotalCustomers DESC;
+```
+
+---Customers Who Canceled Their Subscription Within 6 Months:
+
+```
+SELECT CustomerID, SubscriptionType, DATEDIFF(MONTH, SubscriptionStart, SubscriptionEnd) AS SubscriptionDuration
+FROM [Customer Data LITA]
+WHERE DATEDIFF(MONTH,SubscriptionStart , SubscriptionEnd) <= 6 AND Canceled = 'True';
+```
+
+---Average Subscription Duration for All Customers:
+
+```
+SELECT AVG(DATEDIFF(MONTH, SubscriptionStart, SubscriptionEnd )) AS AverageDuration
+FROM [Customer Data LITA]
+```
+
+---Customers with Subscriptions Longer Than 12 Months:
+
+```
+SELECT CustomerID, SubscriptionType, DATEDIFF(MONTH, SubscriptionStart, SubscriptionEnd) AS SubscriptionDuration
+FROM [Customer Data LITA]
+WHERE DATEDIFF(MONTH, SubscriptionStart, SubscriptionEnd) > 12;
+```
+
+---Total Revenue by Subscription Type:
+
+```
+SELECT SubscriptionType, SUM(Revenue) AS TotalRevenue
+FROM [Customer Data LITA]
+GROUP BY SubscriptionType;
+```
+
+---Top 3 Regions by Subscription Cancellations:
+
+```
+SELECT TOP 3 Region, COUNT(CustomerID) AS Cancellations
+FROM [Customer Data LITA]
+WHERE Canceled = 'TRUE'
+GROUP BY Region
+ORDER BY Cancellations DESC;
+```
+
+---Total Number of Active and Canceled Subscriptions:
+
+```
+SELECT Canceled, COUNT(CustomerID) AS TotalSubscriptions
+FROM [Customer Data LITA]
+GROUP BY Canceled;
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
