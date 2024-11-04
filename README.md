@@ -28,6 +28,38 @@ This EDA provided comprehensive insights that set the stage for deeper analysis 
 
 ## Data Analysis Steps
 
+### Excel: Data Exploration and Analysis
+
+**Overview of Excel Analysis**
+
+In this phase of the project, I conducted a thorough exploration of the customer data using Excel, focusing on critical metrics to uncover insights into customer behavior within the subscription service. The analysis began with the creation of pivot tables to identify subscription patterns, enabling a deeper understanding of customer preferences. By calculating the average subscription duration and identifying the most popular subscription types, I was able to highlight trends in cancellations and renewals, setting the stage for subsequent analyses in SQL and Power BI.
+
+1. Extracting Subscribtion Duration from the Start and End dates column: Created a new column "Subscrition Duration", in the first column, used the formula
+
+```
+=(YEAR(F2) - YEAR(E2)) * 12 + (MONTH(F2) - MONTH(E2))
+```
+
+I was able to dedraw the average duration was calucated to be 12 hours 
+
+Key inisght: The average subscription duration being calculated as 12 months says that on average, customers are staying with the service for one year. This indicates customer retention trends and implies that the service successfully retains customers for about a year before potential churn.
+
+2. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
