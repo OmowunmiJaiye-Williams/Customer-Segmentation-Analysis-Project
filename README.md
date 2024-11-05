@@ -84,7 +84,7 @@ To assess the revenue generated from different subscription types, a pivot table
 
 **Key Insight**: The Basic subscription type dominates revenue generation, contributing nearly 50% of the total revenue. The Premium and Standard subscriptions, while each accounting for 25%, collectively make up the other half of the revenue. This indicates that a significant portion of income is reliant on the Basic plan, emphasizing the importance of this tier to the business. Enhancing the value of Premium and Standard subscriptions could provide an opportunity for boosting overall revenue and diversifying the income stream.
 
-5. Trend of Subscription Types by Region
+5. **Trend of Subscription Types by Region**
 
 In my analysis of subscription data, I explored how different subscription types were distributed across various regions. Below is a summary table that shows the number of customers for each subscription type by region:
 
@@ -115,6 +115,8 @@ In this section, I conducted a comprehensive SQL analysis of customer subscripti
 2. Key Insights Queries
 
 I wrote several SQL queries to extract key insights from the dataset and validate previous findings:
+
+(Note: table name is "Customer Data Lita")
 
 ---Total Number of Customers from Each Region:
 
