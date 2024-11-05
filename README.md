@@ -102,7 +102,7 @@ In this section, I conducted a comprehensive SQL analysis of customer subscripti
 
 2. Key Insights Queries
 
-I wrote several SQL queries to extract key insights from the dataset:
+I wrote several SQL queries to extract key insights from the dataset and validate previous findings:
 
 ---Total Number of Customers from Each Region:
 
@@ -170,14 +170,88 @@ FROM [Customer Data LITA]
 GROUP BY Canceled;
 ```
 
+## Result and Findings 
+
+- **Total Number of Customers from Each Region:**
+   - The analysis revealed just like in the excel analysis an equal distribution of customers across all regions. Each region (East, North, South, and West) has a total of 18,750 customers, resulting in a grand total of 75,000 customers. This indicates balanced market penetration across all regions.
+
+- **Most Popular Subscription Type by Number of Customers:**
+  - The analysis identified the Basic subscription type as the most popular, with 37,500 subscribers. The Premium and Standard subscription types each accounted for 18,750 customers. The findings indicate that the Basic subscription type is the most preferred, making up 50% of the total customer base. The equal distribution between Premium and Standard subscriptions, each at 25%, suggests a balanced interest in these higher-tier options but highlights the dominant appeal of the Basic plan.
+
+- **Customers Who Canceled Their Subscription Within 6 Months:**
+  - No customers were found to have canceled their subscriptions within 6 months. This suggests that short-term cancellations are not an issue and that customers tend to retain their subscriptions for at least this duration.
+
+- **Average Subscription Duration for All Customers:**
+  - The analysis revealed that the average subscription duration for all customers is 12 months. This indicates that, on average, customers tend to stay subscribed for a year, providing a benchmark for evaluating customer retention strategies.
+
+- **Customers with Subscriptions Longer Than 12 Months:**
+  - The analysis found that no customers had subscriptions extending beyond 12 months. This suggests potential challenges in maintaining long-term customer retention and highlights an area for improvement in encouraging longer subscription commitments.
 
 
 
+- **Total Revenue by Subscription Type:**
+
+  - The analysis of subscription data showed that total revenue amounted to ₦149,819,686.00 across all subscription types. The Basic subscription type was the top revenue generator, contributing ₦74,756,784.00, while the Premium and Standard types followed, with revenues of ₦37,580,782.00 and ₦37,482,120.00, respectively. This demonstrates the significant impact of the Basic subscription on overall revenue.
 
 
+| Subscription Type | Sum of Revenue       |
+|-------------------|----------------------|
+| Basic             | ₦74,756,784.00      |
+| Premium           | ₦37,580,782.00      |
+| Standard          | ₦37,482,120.00      |
+| **Grand Total**   | **₦149,819,686.00** |
 
 
+- **Top 3 Regions by Subscription Cancellations:**
+The analysis identified the regions with the highest rates of subscription cancellations, suggesting areas where customer dissatisfaction may be more pronounced. 
 
+| Region | Count of CustomerID |
+|--------|---------------------|
+| East   | 18,750              |
+| FALSE  | 18,750              |
+| North  | 18,750              |
+| FALSE  | 7,500               |
+| TRUE   | 11,250              |
+| South  | 18,750              |
+| FALSE  | 7,500               |
+| TRUE   | 11,250              |
+| West   | 18,750              |
+| FALSE  | 7,500               |
+| TRUE   | 11,250              |
+| **Grand Total** | **75,000**     |
+
+
+- **Key Insights:**
+
+ - Customer Distribution: Each region has a consistent total of 18,750 customers.
+ - Cancellation Rates:
+  - The North and South regions show a significant number of canceled subscriptions, with 11,250 cancellations each.
+  - The East and West regions report no cancellations, suggesting higher retention in these areas.
+- **Overall Total:** The grand total of 75,000 customers reflects the overall customer base, highlighting areas for potential improvement in customer retention strategies, particularly in the North and South regions.
+
+
+- **Most Popular Subscription Type by Number of Customers:**
+  
+
+| Subscription Status | Total Subscriptions |
+|---------------------|---------------------|
+| Active              | 41,250              |
+| Canceled            | 33,750              |
+| **Total**          | **75,000**          |
+
+The findings show an equal distribution of 18,750 customers in each region (East, North, South, and West), totaling 75,000. This indicates balanced market penetration across all regions.
+
+- **Total Number of Active and Canceled Subscriptions:**
+
+| Subscription Status | Total Subscriptions |
+|---------------------|---------------------|
+| Active              | 41,250              |
+| Canceled            | 33,750              |
+| **Total**          | **75,000**          |
+
+The analysis of subscription status revealed that out of 75,000 total subscriptions, 41,250 are active, while 33,750 have been canceled. This indicates that more than half of the subscriptions remain active, but a significant portion—nearly 45%—has been canceled, suggesting potential areas for customer retention improvement.
+
+## PowerBI: Power Query and Visualization
 
 
 
