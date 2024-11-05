@@ -1,5 +1,17 @@
 # Customer-Segmentation-Analysis-Project
 
+## Table of Contents 
+- [Project Overview](#project-overview)
+- [Tools Used](#tools-used)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Analysis Steps](#data-analysis-steps)
+- [Excel: Data Exploration and Analysis](excel-data-exploration-analysis)
+- [Microsoft SQL Server: Data Querying and Analysis](#microsoft-sql-server-data-querying-and-analysis)
+- [PowerBI: Power Query and Visualization](#powerbi-power-query-and-visualization)
+- [Limitation](#limitation)
+- [Conclusion](#conclusion)
+
+
 ## Project Overview
 This project focuses on customer segmentation analysis for a subscription service, aiming to identify customer behavior patterns and key trends in subscription renewals and cancellations. Through data analysis using Excel, SQL, and Power BI, insights are derived to guide targeted strategies and improve customer retention.
 
@@ -42,9 +54,9 @@ In this phase of the project, I conducted a thorough exploration of the customer
 
 I was able to dedraw the average duration was calucated to be 12 hours 
 
-Key inisght: The average subscription duration being calculated as 12 months says that on average, customers are staying with the service for one year. This indicates customer retention trends and implies that the service successfully retains customers for about a year before potential churn.
+**Key inisght**: The average subscription duration being calculated as 12 months says that on average, customers are staying with the service for one year. This indicates customer retention trends and implies that the service successfully retains customers for about a year before potential churn.
 
-2. Count of Customers per Subscription Type:
+2. **Count of Customers per Subscription Type:**
 
 To gain deeper insights into customer preferences, I created a pivot table that summarized the number of customers for each subscription type. The analysis revealed the distribution as follows:
 
@@ -54,7 +66,7 @@ To gain deeper insights into customer preferences, I created a pivot table that 
 
 **Key Insight**: The analysis shows that the Basic subscription type is the most popular, accounting for 50% of all customers. Both Premium and Standard subscription types equally share the remaining customer base at 25% each. This insight highlights customer preference for the more affordable tier, suggesting opportunities for upselling strategies or enhanced features in higher-tier plans to attract more customers.
 
-2. Number of Customers per Region
+3. **Number of Customers per Region**
 
 To understand the geographic distribution of customers, a pivot table was created to count the number of customers from each region. The analysis provided the following breakdown:
 
@@ -63,7 +75,7 @@ To understand the geographic distribution of customers, a pivot table was create
 **Key Insight**: The customer distribution is evenly spread across all regions, with each region contributing exactly 25% of the total customer base. This uniformity suggests consistent market penetration and customer reach across different regions. Future strategies could explore targeted regional marketing campaigns or localized promotions to leverage this balanced distribution for increased customer engagement.
 
 
-3. Revenue by Subscription Type
+4. **Revenue by Subscription Type**
 
 To assess the revenue generated from different subscription types, a pivot table was used to summarize the total revenue for each category. The analysis produced the following results:
 
@@ -72,7 +84,7 @@ To assess the revenue generated from different subscription types, a pivot table
 
 **Key Insight**: The Basic subscription type dominates revenue generation, contributing nearly 50% of the total revenue. The Premium and Standard subscriptions, while each accounting for 25%, collectively make up the other half of the revenue. This indicates that a significant portion of income is reliant on the Basic plan, emphasizing the importance of this tier to the business. Enhancing the value of Premium and Standard subscriptions could provide an opportunity for boosting overall revenue and diversifying the income stream.
 
-4. Trend of Subscription Types by Region
+5. Trend of Subscription Types by Region
 
 In my analysis of subscription data, I explored how different subscription types were distributed across various regions. Below is a summary table that shows the number of customers for each subscription type by region:
 
@@ -82,7 +94,7 @@ In my analysis of subscription data, I explored how different subscription types
 
 **Key Insight:** The Basic subscription type is predominantly chosen by customers in the East and North regions, making up 100% of the customer base in these areas. The Premium subscription type is most popular in the South, while the Standard subscription type is only present in the West. This segmentation suggests region-specific preferences, which could inform targeted marketing strategies and service customization to better address regional customer needs.
 
-Subscription Cancellations
+6. **Subscription Cancellations**
 
 To understand the balance between active subscriptions and cancellations, I analyzed the dataset to determine the number of customers who maintained their subscriptions versus those who canceled. The table below presents the findings:
 
@@ -90,7 +102,7 @@ To understand the balance between active subscriptions and cancellations, I anal
 ![Screenshot 2024-11-04 141742](https://github.com/user-attachments/assets/25094b8b-29fd-412d-840b-e2816aa6212b)
 
 
-Key Insight:
+**Key Insight:**
 
 Out of 75,000 customers, 55% have active subscriptions, while 45% have canceled. The significant cancellation rate highlights a need to explore factors like service quality, pricing, or competition to reduce churn and improve retention.
 
@@ -222,12 +234,15 @@ The analysis identified the regions with the highest rates of subscription cance
 
 
 - **Key Insights:**
+   - Customer Distribution: Each region has a consistent total of 18,750 customers.
+     
+   - Cancellation Rates:
 
- - Customer Distribution: Each region has a consistent total of 18,750 customers.
- - Cancellation Rates:
-  - The North and South regions show a significant number of canceled subscriptions, with 11,250 cancellations each.
-  - The East and West regions report no cancellations, suggesting higher retention in these areas.
-- **Overall Total:** The grand total of 75,000 customers reflects the overall customer base, highlighting areas for potential improvement in customer retention strategies, particularly in the North and South regions.
+     The North and South regions show a significant number of canceled subscriptions, with 11,250 cancellations each.
+
+     The East and West regions report no cancellations, suggesting higher retention in these areas.
+     
+     The grand total of 75,000 customers reflects the overall customer base, highlighting areas for potential improvement in customer retention strategies, particularly in the North and South regions.
 
 
 - **Most Popular Subscription Type by Number of Customers:**
@@ -253,9 +268,72 @@ The analysis of subscription status revealed that out of 75,000 total subscripti
 
 ## PowerBI: Power Query and Visualization
 
+1. **Loading Data to Power BI:**
+   - The data was successfully loaded into Power BI from the designated data source (Excel file).
+
+2. **Data Transformation:**
+ 
+   - Changed table name from Sheet 1 to "Subscription data"
+   - I transformed the "Canceled" column to improve clarity for dashboard viewers. The original values of "True" (indicating cancellation) and "False" (indicating active subscriptions) were replaced with more descriptive terms:
+     - **True** was replaced with **"Canceled."**
+     - **False** was replaced with **"Active."**
+   - This transformation was achieved using the "Replace Values" option under the "Transform" tab, allowing for easier understanding of subscription status.
+
+4. **Creating a DAX Measure:**
+   - To analyze the canceled subscriptions, I created a measure that calculates the count of subscriptions marked as "Canceled." This enables visualization of cancellation trends over time, providing insights into customer retention and identifying peak cancellation periods.
+    - Used the Code
+
+   ```dax
+   Canceled Count = COUNTROWS(FILTER('Subscription Data', 'Subscription Data'[Canceled] = "Canceled"))
+   ```
+
+   - **Insight Gained:** Visualizing canceled subscriptions by month helps in identifying trends in customer churn, allowing for targeted retention strategies during peak cancellation periods.
+
+5. **Visualizing SQL Query Titles:**
+   - I visualized key insights derived from SQL queries, such as the total number of subscriptions, average subscription duration, and revenue by subscription type. These visualizations provide stakeholders with a clear understanding of the subscription landscape and aid in strategic decision-making.
 
 
+### Summary of Visualizations
+
+The dashboard is designed to provide comprehensive insights into subscription trends and customer behavior, organized into three main sections:
+
+ **1. Key Customer Segments**
+- **Count of Customers by Subscription Type:** Displays the distribution of customers across different subscription types, highlighting the popularity of each.
+- **Count of Customers by Region:** Visualizes the geographic distribution of customers, providing insights into regional engagement.
+
+ **2. Cancellations Analysis**
+- **Top 3 Regions by Canceled Subscriptions:** Identifies the regions with the highest cancellation rates, offering a focus area for retention strategies.
+- **Monthly Cancellation Trends:** Utilizes the "Canceled Count" measure to illustrate how cancellation rates fluctuate on a monthly basis, enabling trend analysis over time.
+- **Cancellations: Active vs. Canceled:** A visual comparison of active subscriptions against canceled ones, providing a snapshot of overall retention.
+
+ **3. Subscription Trends**
+- **Average Subscription Duration by Type (in months):** Reveals the average length of time customers maintain their subscriptions, segmented by type.
+- **Revenue Breakdown by Subscription Type:** Highlights the contribution of each subscription type to total revenue, identifying key revenue drivers.
+
+ **Interactive Features**
+To enhance user experience, the dashboard includes three interactive slicers:
+- **Subscription Status:** Allows users to filter data based on active or canceled subscriptions.
+- **Subscription Type:** Enables selection between different subscription categories for a more focused analysis.
+- **Region:** Facilitates geographic filtering, allowing users to drill down into specific areas.
 
 
+![Screenshot 2024-10-29 114718](https://github.com/user-attachments/assets/bc637e38-b766-4cef-9624-a5db14c49f50)
+
+
+## Limitation
+
+- Measure Dependency:
+        The "Canceled Count" measure relies solely on the updated "Canceled" column values, which may not account for the reasons behind cancellations. This limits the ability to perform a more nuanced analysis of customer churn.
+
+
+## Conclusion 
+
+The analysis of the subscription data provided valuable insights into customer behavior and revenue generation for the subscription service. Key findings include:
+
+ - Revenue Analysis: The Basic subscription type emerged as the top revenue generator, significantly outperforming others in total revenue.
+ - Subscription Trends: There is a balanced distribution of subscriptions across regions, though cancellation rates indicate areas for potential improvement in customer retention.
+ - Customer Behavior: The monthly cancellation trends reveal patterns that can inform strategies to enhance subscriber loyalty.
+
+Despite limitations such as reliance on data transformations and potential misinterpretations of dashboard slicers, the insights gained can guide future strategies in subscription offerings, customer engagement, and retention initiatives.
 
 
