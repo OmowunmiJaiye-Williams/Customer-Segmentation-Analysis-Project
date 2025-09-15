@@ -68,40 +68,35 @@ As a data professional supporting a subscription-based company, the business nee
 
 - Power BI → Created an interactive dashboard with Power Query cleaning & DAX measures to visualize churn and revenue drivers.
 
-📸 Insert dashboard screenshots here (e.g., Revenue by Type, Cancellation Trends, Customer Segments)
+  
+![Screenshot 2024-10-29 114718](https://github.com/user-attachments/assets/bc637e38-b766-4cef-9624-a5db14c49f50)
 
-🚀 Recommendations
 
-Upsell Opportunity: Improve Premium/Standard plans with exclusive perks to reduce overreliance on Basic.
+## 🚀 Recommendations
 
-Retention Strategy: Trigger campaigns near 12 months to extend customer lifecycle.
+- Upsell Opportunity: Improve Premium/Standard plans with exclusive perks to reduce overreliance on Basic.
 
-Regional Focus: Investigate and address churn drivers in North & South.
+- Retention Strategy: Trigger campaigns near 12 months to extend customer lifecycle.
 
-Revenue Diversification: Explore annual/multi-year subscription discounts.
+- Regional Focus: Investigate and address churn drivers in North & South.
 
-📂 Deliverables
+- Revenue Diversification: Explore annual/multi-year subscription discounts.
 
-Excel pivot analysis → Subscription patterns & revenue breakdown.
 
-SQL queries → Customer counts, cancellations, average durations.
+## ⚖️ Limitations
 
-Power BI dashboard → Interactive visuals for stakeholders.
+- Dataset limited to one year → unable to track long-term loyalty.
 
-⚖️ Limitations
+- Cancellation reasons not captured → qualitative data would strengthen analysis.
 
-Dataset limited to one year → unable to track long-term loyalty.
-
-Cancellation reasons not captured → qualitative data would strengthen analysis.
-
-📌 Conclusion
+## 📌 Conclusion
 
 This project demonstrates the ability to use Excel, SQL, and Power BI not just as tools, but as enablers of business strategy. By translating customer data into actionable insights, the project highlights opportunities to:
 
-Increase retention by tackling the 12-month churn cliff.
+- Increase retention by tackling the 12-month churn cliff.
 
-Diversify revenue beyond the Basic plan.
+- Diversify revenue beyond the Basic plan.
 
-Target high-churn regions with tailored interventions.
+- Target high-churn regions with tailored interventions.
 
-📌 Disclaimer: Project for portfolio purposes using sample subscription data.
+### 📌 Disclaimer: Project for portfolio purposes using sample subscription data.
